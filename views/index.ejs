@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+   
+    <title>SMPC Demo</title>
+    <link href="/style.css"rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <iframe name="screen" style="display:none;"></iframe>
+    <button class="tablink" onclick="openPage('Home', this, '#22333B')"id="defaultOpen">Home</button>
+    <button class="tablink" onclick="openPage('Salary', this, '#519872')">Salary</button>
+    
+    <div id="Home" class="tabcontent">
+      <h1>Home</h1>
+      <p>A visual demonstration on how Secure Multiparty Computation works</p>
+    </div>
+
+    <div id="Salary" class="tabcontent">
+      <h1>Salary Demo</h1>
+      <p id="description">A group of people wish to find out the average salary 
+        but do not wish to reveal how much they make to each other. SMPC will 
+        be used to find the average
+      </p>
+
+      <label for="people">Choose amount of people:</label>
+
+      <select name="people" id="people">
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select> 
+
+      <div style="width: 100%; overflow: hidden;">
+      <div style="width: 280px; float: left;" id="container"></div>
+      <div style="margin-left: 320px;" id="showTable"></div>
+      <h2 id="salSum"></h2>
+      <h2 id="salAvg"></h2>
+      </div>
+      <button id="dataButton">Get Data</button>
+      <div style="margin-left: 320px;" id="salaryTable"></div>
+    </div>
+  </body>
+
+  <script>
+    function openPage(pageName, elmnt, color) {
+  // Hide all elements with class="tabcontent" by default */
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+
+      // Remove the background color of all tablinks/buttons
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+
+      // Show the specific tab content
+      document.getElementById(pageName).style.display = "block";
+
+      // Add the specific color to the button used to open the tab content
+      elmnt.style.backgroundColor = color;
+}
+    function yourFunc() { 
+      const selectDropdown = document.querySelector('select');
+      var numberPeople = selectDropdown.value; 
+      var container = document.getElementById("container");
+      container.innerHTML = '';
+      var form = document.createElement("form");
+      form.setAttribute(
+        'method', "post"
+      );
+      form.id = "dataForm";
+      form.setAttribute('action',"/people")
+      form.target = "screen"
+      container.appendChild(form);
+      for (i = 0; i < numberPeople; i++) {
+        form.appendChild(document.createTextNode("Person " + (i + 1) + "  "));
+        var input = document.createElement("input");
+        input.type = "password";
+        input.name = "Person";
+        //input.required= true;
+        form.appendChild(input);
+        //container.appendChild(input);
+        form.appendChild(document.createElement("br"));
+        form.appendChild(document.createElement("br"));
+      }
+      var lastInput = document.createElement("input"); 
+      lastInput.type = "hidden"; 
+      lastInput.name = "NumberPeople";
+      lastInput.value = numberPeople;
+      form.appendChild(lastInput); 
+      var s = document.createElement("input"); //input element, Submit button
+      s.id = "subBtn"; 
+      s.setAttribute('type',"submit");
+      s.setAttribute('value',"Submit");
+      form.appendChild(s); 
+ }
+
+const selectDropdown = document.querySelector('select');
+selectDropdown.addEventListener('change', yourFunc);
+
+document.getElementById("defaultOpen").click(); 
+  </script>
+  <script type="module" src="fetch.js">
+  </script>
+</html>

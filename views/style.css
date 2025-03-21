@@ -1,0 +1,67 @@
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+  color: black;
+}
+
+table,
+th,
+td {
+  table-layout: fixed;
+  width: 100%;
+  border: solid 1px #ddd;
+  border-collapse: collapse;
+  padding: 2px 3px;
+  text-align: center;
+  font-size: 10pt;
+
+}
+
+th {
+  font-weight: bold;
+}
+
+
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 50%;
+}
+.input{
+  width:50px;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: black;
+  display: none;
+  padding: 50px 20px;
+  height: 100%;
+}
+
+#Home {background-color: white;}
+#Salary {background-color: white;}
+#Password {background-color: white;}
+#container{
+  padding: 20px 16px;
+  font-size: 20px;
+  width: 50%;
+}
+#description {
+  width: 25%;
+  letter-spacing: 1px;
+  
+}

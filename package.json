@@ -1,0 +1,25 @@
+{
+  "name": "4600-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "nodemonConfig": {
+    "ignore": [
+      "PeopleShares.json",
+      "RandomShares.json"
+    ]
+  },
+  "scripts": {
+    "start:dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
