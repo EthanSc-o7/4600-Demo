@@ -12,16 +12,17 @@ td {
   width: 100%;
   border: solid 1px #ddd;
   border-collapse: collapse;
-  padding: 2px 3px;
-  text-align: center;
+  padding: 2px 2px;
+  text-align: left;
   font-size: 10pt;
-
+}
+td{
+  height: 30px;
 }
 
 th {
   font-weight: bold;
 }
-
 
 
 /* Style tab links */
@@ -52,8 +53,80 @@ th {
   height: 100%;
 }
 
-#Home {background-color: white;}
-#Salary {background-color: white;}
+.dataButton {
+  background-color: #e0e2db;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: monospace;
+  color: white;
+  padding: 20px;
+  margin-left: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+/* CSS */
+#dataButton,#subBtn {
+  align-items: center;
+  background-image: linear-gradient(144deg,#013220,#8AE9B3);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: black;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+#dataButton:active,
+#dataButton:hover {
+  outline: 0;
+}
+
+#dataButton span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+#dataButton:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  #dataButton {
+    font-size: 24px;
+    min-width: 196px;
+  }
+}
+
+
+#Home {
+  background-color: #AFC8DE;
+  height: 800px;
+}
+#Salary {
+  background-color: #5f7470;
+  height: 800px;
+  color: white; 
+}
 #Password {background-color: white;}
 #container{
   padding: 20px 16px;
@@ -64,4 +137,12 @@ th {
   width: 25%;
   letter-spacing: 1px;
   
+}
+
+#explanation {
+  
+  width: 45%;
+  letter-spacing: 3px;
+
+
 }
