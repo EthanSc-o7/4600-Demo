@@ -3,7 +3,7 @@ export function createShares(numPeople, people){
     var secretShares = []; 
     for(let i = 0; i < numPeople-1; i++){
       var plusOrMinus = Math.random() < 0.5 ? -1 : 1;
-      var share = Math.floor(Math.random() * 1001) * plusOrMinus;
+      var share = Math.floor(Math.random() * 100001) * plusOrMinus;
       secretShares[i] = share; 
     }
     secretShares[numPeople-1] = people[j].salary - secretShares.reduce((partialSum, a) => partialSum + a, 0);

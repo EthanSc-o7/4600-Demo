@@ -13,7 +13,18 @@
     
     <div id="Home" class="tabcontent">
       <h1>Home</h1>
-      <p>A visual demonstration on how Secure Multiparty Computation works</p>
+      <h2 id="intro">A visual demonstration on how Secure Multiparty Computation works using <strong>Additive Secret Sharing </strong></h2>
+      <div><img src="/assets/image_MPC.png"  
+        width="500" height="300" alt="SMPC pic"></div>
+      <div>
+        <div id="imageFlex">
+      <img src="/assets/Asecshare.jpg" width="425" height="302" alt="">
+
+        <div id="textBorder"><p id="intro2">For our demonstration we will have a group of people who will want to analyze private information. They will use secure multi party computation 
+          techniques to encrypt their private info and additive secret sharing will be done to show that its possible to do computations on only secret inputs, where the only
+        data that is revealed is the final result.  </p></div>
+    </div>
+      </div>
     </div>
 
     <div id="Salary" class="tabcontent">
@@ -33,20 +44,20 @@
       </select> 
 
       <div style="width: 100%; overflow: hidden;">
-      <div style="width: 280px; float: left;" id="container"></div>
+      <div style="width: 250px; float: left;" id="container"></div>
       <div style="margin-left: 320px;" id="showTable"></div>
       <br>
       <br>
       <br>
       <h2 id="salSum"></h2>
-      <h2 id="salAvg"></h2>
+      <h2 id="salAvg" ></h2>
       </div>
       <button id="dataButton">Get Data</button>
       <div style="margin-left: 320px;" id="salaryTable"></div>
       <p id="explanation">Explanation: The group of people will enter their numbers, which can't be seen 
-        by anyone else. Next, each person's number will be split into n secret shards, then 
-        the shards are distributed so that every person has one shard from everyone else and their 
-        own. If someone were to add their distributed shards the answer wont reveal anyones salary. 
+        by anyone else. Next, each person's number will be split into n secret shares, then 
+        the shares are distributed so that every person has one shard from everyone else and their 
+        own. If someone were to add their distributed shares the answer wont reveal anyones salary. 
         Only after adding every person's shares and then finding the average will show the average 
         of all their salaries.  
       </p>

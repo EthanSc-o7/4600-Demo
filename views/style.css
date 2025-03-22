@@ -14,7 +14,7 @@ td {
   border-collapse: collapse;
   padding: 2px 2px;
   text-align: left;
-  font-size: 10pt;
+  font-size: 9.5pt;
 }
 td{
   height: 30px;
@@ -117,14 +117,14 @@ th {
   }
 }
 
-
 #Home {
   background-color: #AFC8DE;
-  height: 800px;
+  height: 900px;
 }
 #Salary {
   background-color: #5f7470;
-  height: 800px;
+  /*#293624  #5f7470*/
+  height: 900px;
   color: white; 
 }
 #Password {background-color: white;}
@@ -138,11 +138,35 @@ th {
   letter-spacing: 1px;
   
 }
+#salAvg,#salSum{
+  padding-left: 312px;
+}
 
 #explanation {
+  
+  padding: 50px;
   
   width: 45%;
   letter-spacing: 3px;
 
 
+}
+#intro{
+  width: 45%;
+}
+#imageFlex{
+  display: flex;
+}
+#textBorder{
+  margin-bottom:  120px;
+  margin-left: 120px;
+  width: 40%;
+  height: 40%;
+  background-color: #2e4053;
+}
+#intro2{
+  padding: 25px;
+  
+  color: white;
+  font-size: 18pt;
 }
